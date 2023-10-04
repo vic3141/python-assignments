@@ -2,7 +2,7 @@ l = True
 while l == True: 
     char = str(input("Enter a character: "))
     if len(char) != 1:
-        print("Enter a single letter, bakayaro!")
+        print("Enter a single letter, noob!")
     else:
         if ((char >= 'a' and char <= 'z') or (char >= 'A' and char <= 'Z')):
             print(char,"is a letter.")
