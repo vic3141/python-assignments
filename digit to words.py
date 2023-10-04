@@ -23,7 +23,7 @@ l = True
 while l == True: 
     char = input("Enter a character: ")
     if len(char) != 1 or char.isalpha():
-        print("Enter a single number, bakayaro!")
+        print("Enter a single number, noob")
     else:
         print(num_2_word(char), "\n")
     l = input("Do you want to run the program again? (y/n): ")
