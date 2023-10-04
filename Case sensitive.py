@@ -2,7 +2,7 @@ l = True
 while l == True: 
     char = str(input("Enter a character: "))
     if len(char) != 1 or char.isdigit():
-        print("Enter a single Letter, bakayaro!")
+        print("Enter a single Letter, noob!")
     elif char.isupper():
         print(char,"is uppercase.")
     else:
