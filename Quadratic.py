@@ -1,25 +1,28 @@
 
-def eqn(a,b,c):
-    global det
-    det = b**2 - 4*a*c
-    if det == 0 or det > 0:
-        x1 = float((-b + (det)**0.5)/2*a)
-        x2 = float((-b - (det)**0.5)/2*a)
-        return x1, x2
-        
-    elif det < 0:
-        return "No real solutions"
-l = True
-while l == True:
-    a = int(input("Enter the co-efficient of x\N{SUPERSCRIPT TWO}: "))
-    b = int(input("Enter the co-efficient of x: "))
-    c = int(input("Enter the constant term: "))
-    print(eqn(a,b,c))
-    l = input("Do you want to run the program again? (y/n): ")
-    if l == "y":
-        l = bool(1)
-    else:
-        l = bool(0)
-    
+import math as m 
+a= int(input("enter numerical coefficient 1 :  "))
+b= int(input("enter numerical coefficient 2 :  "))
+c= int(input("enter numerical coefficient 3 :  "))
+# taking the discriminant 
+discriminant = b ** 2 - 4 * a * c
+# if d > 0 , roots are real and distinct
+if discriminant > 0 :
+    root1 = (-b + m.sqrt(discriminant)) / (2 * a)
+    root2 = (-b - m.sqrt(discriminant)) / (2 * a)
+    print("Roots are real and distinct")
+    print("Root 1:", root1)
+    print("Root 2:", root2)
+# if d = 0 , roots are real and same
+elif discriminant == 0:
+    root = -b / (2 * a)
+    print("Roots are real and same")
+    print("Root:", root)
+# if d < 0 , roots are complex and diffrent     
+else:
+    realPart = -b / (2 * a)
+    imaginaryPart = m.sqrt(-discriminant) / (2 * a)
+    print("Roots are complex and different")
+    print("Root 1:", realPart, "+", imaginaryPart, "i")
+    print("Root 2:", realPart, "-", imaginaryPart, "i")
     
 
