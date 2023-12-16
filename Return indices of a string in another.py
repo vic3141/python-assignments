@@ -1,20 +1,15 @@
-l = True
-while l == True:
-    str1 = str(input("Enter a string: "))
-    str2 = str(input("Enter another string: "))
-    indices = []
-    index = -1
-    while True:
-        index = str1.find(str2, index + 1)
-        if index == -1:
-            break
-        indices.append(index)
-    if indices == []:
-        print(-1)
-    else:
-        print(indices)
-    l = input("Do you want to run the program again? (y/n): ")
-    if l == "y":
-        l = bool(1)
-    else:
-        l = bool(0)
+t = True
+while t == True :
+    str1=input("enter string 1  : ")
+    str2=input("enter string 2  : ")
+    l=[]
+    list1=list(str1)
+    a=len(list1)
+    for i in range(a):
+        l.append(i)
+    #l=str(l)
+   # str2=str2+l
+   # print(str2)
+    for i in l:
+        str2=str2 +','+ str(i)
+    print(str2)
