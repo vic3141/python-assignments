@@ -1,13 +1,12 @@
-l = True
-while l == True: 
-    n = int(input("Enter number of rows: "))
-    i = int(1)
-    while n != 0:
-        print("* "*i, "\n")
-        i += 2
-        n -= 1
-    l = input("Do you want to run the program again? (y/n): ")
-    if l == "y":
-        l = bool(1)
-    else:
-        l = bool(0)
+#WAP to create a pyramid of the character ‘*’ and a reverse pyramid
+r = int(input("enter number of rows :  "))
+
+for i in range(r):
+    for j in range(i+1):
+        print("*",end="")
+    print("\n")
+#inverted pyramid 
+for i in range(r,0,-1):
+    for j in range(i):
+        print("*",end="")
+    print("\n")
